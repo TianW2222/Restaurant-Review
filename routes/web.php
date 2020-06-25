@@ -10,9 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-if (App::environment('production')) {
-    URL::forceScheme('https');
-}
 Route::redirect('/', '/restaurants');
 
 Auth::routes();
@@ -20,3 +17,8 @@ Auth::routes();
 Route::resource('restaurants', 'RestaurantController');
 
 Route::resource('reviews', 'ReviewController');
+
+
+if (App::environment('production')) {
+    URL::forceScheme('https');
+}
