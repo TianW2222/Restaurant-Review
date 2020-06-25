@@ -17,8 +17,3 @@ Auth::routes();
 Route::resource('restaurants', 'RestaurantController');
 
 Route::resource('reviews', 'ReviewController');
-
-
-if (App::environment('production')) {
-    URL::forceScheme('https');
-}
