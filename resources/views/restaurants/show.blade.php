@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-6">
-            <img src="{{preg_match('/^http/', $restaurant->image) ? $restaurant->image : '/storage/'.$restaurant->image }}" class="w-100">
+            <img src="/storage/images/foodimage2.jpeg" class="w-100">
         </div>
         <div class="col-6">
             <h1 class="pt-4">{{ $restaurant->name }}</h1>

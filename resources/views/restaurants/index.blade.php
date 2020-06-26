@@ -14,7 +14,7 @@
                 @foreach($restaurants as $restaurant)
                     <a class="col-md-4" style="text-decoration:none" href="/restaurants/{{ $restaurant->id }}?sort=new">
                         <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" src="{{preg_match('/^http/', $restaurant->image) ? $restaurant->image : '/storage/'.$restaurant->image }}">
+                            <img class="card-img-top" src="{{ $restaurant->image }}">
                             <div class="card-body">
                                 <h3 class="card-title">{{ $restaurant->name }}</h3>
                                 <h4 class="car-subtitle">{{ $restaurant->location }}</h4>

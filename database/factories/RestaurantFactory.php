@@ -10,7 +10,7 @@ $factory->define(Restaurant::class, function (Faker $faker) {
     return [
         'name' => $faker->company,
         'location' => $faker->streetAddress,
-        'image' => $faker->imageUrl(640, 480, 'food'),
+        'image' => '/storage/images/foodimage' . mt_rand(1,8) . '.jpeg',
         'user_id' => $faker->randomElement($users),
     ];
 });
